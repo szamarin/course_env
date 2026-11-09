@@ -1,0 +1,54 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python bytecode, build & packaging artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Marimo & notebook session/cache artifacts
+__marimo__/
+.marimo/
+.ipynb_checkpoints/
+
+# Testing, linting & type-checking caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment variables & local secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux & Editor backup files
+*~
+*.swp
+*.swo
+
+# IDEs
+.vscode/
+.idea/

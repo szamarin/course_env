@@ -1,0 +1,13 @@
+student_id,cohort,study_hours,practice_labs_completed,quiz_score
+101,Foundations,4.5,2,72.0
+102,Foundations,6.0,3,81.5
+103,Foundations,8.2,5,89.0
+104,Foundations,3.0,1,64.0
+105,DataScience,7.5,4,86.0
+106,DataScience,9.5,6,94.5
+107,DataScience,5.0,3,77.0
+108,DataScience,10.0,6,96.0
+109,Analytics,6.5,4,83.0
+110,Analytics,8.0,5,90.5
+111,Analytics,4.0,2,70.0
+112,Analytics,9.0,5,92.0
