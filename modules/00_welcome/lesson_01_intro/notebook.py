@@ -6,8 +6,14 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
+    from pathlib import Path
     import platform
     import sys
+
+    # Ensure `<repo_root>/src` is on sys.path relative to this notebook
+    _src_dir = str(Path(__file__).resolve().parents[3] / "src")
+    if _src_dir not in sys.path:
+        sys.path.insert(0, _src_dir)
 
     import altair as alt
     import marimo as mo
@@ -140,11 +146,6 @@ def _(filtered_df, pl):
         .sort("cohort")
     )
     summary_by_cohort
-    return
-
-
-@app.cell
-def _():
     return
 
 

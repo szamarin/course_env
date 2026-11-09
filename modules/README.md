@@ -23,9 +23,16 @@ modules/
    uv run marimo edit modules/01_data_wrangling/lesson_01_filtering/notebook.py
    ```
 
-3. **Access lesson-local assets inside `notebook.py`:**
-   Use `course_utils.get_asset_path` so paths work regardless of the working directory from which marimo is launched:
+3. **Access `course_utils` and lesson-local assets inside `notebook.py`:**
+   Even though `course_utils` is installed in `.venv`, adding `src/` relative to `__file__` at the top of the notebook guarantees imports work regardless of how or where the notebook is launched:
    ```python
+   from pathlib import Path
+   import sys
+
+   _src_dir = str(Path(__file__).resolve().parents[3] / "src")
+   if _src_dir not in sys.path:
+       sys.path.insert(0, _src_dir)
+
    from course_utils import get_asset_path
    import polars as pl
 

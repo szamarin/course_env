@@ -29,3 +29,7 @@ lab = "course_utils.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/course_utils"]
+
+[tool.marimo.runtime]
+pythonpath = ["src"]
+
